@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himachal Special Offers</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        /* Existing styles remain the same */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Align items vertically */
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+        }
+
+        .swiper {
+            width: 100%;
+            max-width: 1000px;
+            padding-bottom: 40px;
+            height: auto; /* Allow the height to adjust automatically based on content */
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative; /* Make position relative to place offer number at top */
+            padding-top: 20px; /* Add some padding at the top */
+        }
+
+        .offer-number {
+            background-color: orangered;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 10px; /* Space between offer number and content */
+        }
+
+        .offer-container {
+            background-color: #0a5257;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap; /* Enable wrapping for better responsiveness */
+        }
+
+        .offer-image {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .offer-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-left: 40px;
+            margin-top: 32px;
+            transition: transform 0.3s ease;
+        }
+
+        .image1{
+            margin-top: -30px;
+        }
+
+        .offer-image img:hover {
+            transform: scale(1.05);
+        }
+
+        
+
+        .offer-details {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            padding-left: 60px;
+            padding-right: 60px;
+            margin-top: 10px;
+        }
+
+
+        /* Remaining existing styles */
+        .offer-title {
+            font-size: 2em;
+            color: yellow;
+            margin-bottom: 10px;
+        }
+
+        .offer-title:hover {
+            color: yellowgreen;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .offer-description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .offer-price {
+            font-size: 1.8em;
+            color: lightblue;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e05500;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        .offer-footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #fff;
+        }
+
+        .swiper-pagination {
+            bottom: 0px !important;
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            color: orangered;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            margin-left: 6px;
+            margin-right: 6px;
+            margin-top: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        .swiper-button-next {
+            right: -5px;
+        }
+
+        .swiper-button-prev {
+            left: -5px;
+        }
+
+        .swiper-button-next::after,
+        .swiper-button-prev::after {
+            font-size: 25px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Apply the animation to the offer details */
+        .offer-details {
+            animation: fadeIn 1.5s ease-in-out;
+            animation-delay: 1s; /* Delays the animation by 1 second */
+        }
+
+        @media (max-width: 768px) {
+            body {
+                align-items: flex-start; /* Align items at the top for smaller screens */
+            }
+
+            .swiper {
+                padding-bottom: 20px;
+                height: auto;
+            }
+
+            .offer-container {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .offer-image img {
+                margin-left: 10px;
+            }
+
+            .offer-title {
+                font-size: 1.6em;
+            }
+
+            .offer-description {
+                font-size: 1em;
+            }
+
+            .offer-price {
+                font-size: 1.3em;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                width: 30px;
+                height: 30px;
+            }
+
+            .swiper-button-next::after,
+            .swiper-button-prev::after {
+                font-size: 20px;
+                justify-content: center;
+                justify-items: center;
+            }
+
+            .swiper-button-next {
+                right: -5px;
+                margin-top: 100px;
+            }
+
+            .swiper-button-prev {
+                left: -5px;
+                margin-top: 100px;
+            }
+
+            .swiper-pagination {
+                margin-bottom: 0px;
+                margin-top: -30px;
+            }
+            .image1{
+            margin-top: 0px;
+        }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 5px;
+            transition: 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e05500;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        .offer-details .cta-button a {
+            color: #fff;
+        }
+
+        .offer-details .cta-button i {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div style="--swiper-navigation-color: orangered; --swiper-pagination-color: orangered" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <!-- Offer 1 -->
+            <div class="swiper-slide">
+                <!-- Offer Number Outside Container -->
+                <div class="offer-number">Here Are 2 Packages</div>
+                <div class="offer-number">Package 1</div>
+                <div class="offer-container">
+                    <div class="offer-image image1">
+                        <img src="himachal.jpg" alt="Himachal special Offer">
+                    </div>
+                    <div class="offer-details">
+                        <h1 class="offer-title">Himachal Special Offer!</h1>
+                        <p class="offer-description">Explore the beautiful Himachal with our exclusive package. Enjoy an
+                            6-days, 5-nights trip, including stay, meals, and exciting activities at a discounted rate!
+                        </p>
+                        <p class="offer-price">Starting at just ₹11,333 per person</p>
+                        <a href="tel:+918087550340" class="cta-button"><i class="fas fa-phone"></i>Book Now</a>
+                        <p class="offer-footer">*Terms and conditions apply. Offer valid until july 2024-March 2025.</p>
+                        <a href="javascript:history.back()" class="button">Back</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Offer 2 -->
+            <div class="swiper-slide">
+                <!-- Offer Number Outside Container -->
+                <div class="offer-number">Package 2</div>
+                <div class="offer-container">
+                    <div class="offer-image">
+                        <img src="spiti&kinnaur.jpg" alt="Spiti 7 Kinnaur Special Offer">
+                    </div>
+                    <div class="offer-details">
+                        <h1 class="offer-title">Himachal Special Offer!</h1>
+                        <p class="offer-description">Explore the beautiful Spiti & Kinnaur with our exclusive package. Enjoy a
+                            10-days, 9-nights trip, including stay, meals, and exciting activities at a discounted rate!
+                        </p>
+                        <p class="offer-price">Starting at just ₹23,800 per person</p>
+                        <a href="tel:+918087550340" class="cta-button"><i class="fas fa-phone"></i>Book Now</a>
+                        <p class="offer-footer">*Terms and conditions apply. Offer valid from 19 Dec 2024.
+                        </p>
+                        <a href="javascript:history.back()" class="button">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
+</body>
+
+</html>

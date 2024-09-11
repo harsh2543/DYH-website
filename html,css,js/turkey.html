@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turkey Special offer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .offer-container {
+            background-color: #0a5257;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .offer-image {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .offer-image img {
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .offer-image img:hover {
+            transform: scale(1.05);
+        }
+
+
+        .offer-details {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .offer-title {
+            font-size: 2em;
+            color: maroon;
+            margin-bottom: 10px;
+        }
+
+        .offer-title:hover {
+            color: orangered;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .offer-description {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .offer-price {
+            font-size: 1.8em;
+            color: goldenrod;
+            margin-bottom: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e05500;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        .offer-footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #777777;
+        }
+        /* Define the animation using @keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply the animation to the offer details */
+.offer-details {
+    animation: fadeIn 1.5s ease-in-out;
+    animation-delay: 1s; /* Delays the animation by 1 second */
+}
+
+
+.offer-footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #fff;
+        }
+
+ @media (max-width: 768px) {
+            .offer-container {
+                flex-direction: column;
+                text-align: center;
+                margin-top: -90px;
+            }
+
+            .offer-image img {
+                max-width: 100%;
+                margin-bottom: 20px;
+                margin-left: 10px;
+                margin-top: 90px;
+            }
+
+            .offer-title {
+                font-size: 1.6em;
+            }
+
+            .offer-description {
+                font-size: 1em;
+            }
+
+            .offer-price {
+                font-size: 1.3em;
+            }
+            .offer-details{
+                margin-top: 
+                -20px;
+            }
+            .offer-details .cta-button a{
+            color: #fff;
+        }
+        .offer-details .cta-button i{
+            margin-right: 10px;
+        }
+}
+.button {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #ff6600;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #e05500;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+        .offer-details .cta-button a{
+            color: #fff;
+        }
+        .offer-details .cta-button i{
+            margin-right: 10px;
+        }
+    </style>
+       
+</head>
+
+<body>
+    <div class="offer-container">
+        <div class="offer-image">
+            <img src="turkey.jpg" alt="turkey Special Offer">
+        </div>
+        <div class="offer-details">
+            <h1 class="offer-title">Turkey Diwali & Dusshera Special Offer!</h1>
+            <p class="offer-description">Explore the beautiful Turkey with our exclusive package. Enjoy a 9-days, 8-nights trip, including stay, meals, and exciting activities at a discounted rate!</p>
+            <p class="offer-price">Min 4 pax</p>
+            <a href="tel:+918087550340" class="cta-button"><i class="fas fa-phone"></i>Book Now</a>
+            <a href="javascript:history.back()" class="button">Back</a>
+        </div>
+    </div>
+</body>
+
+</html>

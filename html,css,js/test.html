@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+<style>
+    .service ul {
+    list-style-type: none;
+}
+
+.service ul li {
+    position: relative;
+    padding-left: 30px; 
+    margin-top: 15px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.service ul li::before {
+    content: "•"; 
+    color: orangered; 
+    position: absolute;
+    font-size: 25px; 
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%);
+}
+.service{
+    background-color: #0a5257;
+}
+.service h1{
+    color: orangered;
+    margin-left: 43px;
+    padding-top: 30px;
+}
+.li4{
+    margin-bottom: 15px;
+}
+.service ul{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+</style>
+</head>
+<body>
+    <div class="service">
+        <h1>Services</h1>
+        <ul>
+        <div class="list">
+        <li>Domestic & International Packages.</li>
+        <li>Flight, Hotel, Cruise and Group tours bookings.</li>
+        <li>Corporate & Customized Booking.</li>
+        <div class="li4"><li>Travel Insuarance.</li></div>
+        </div>
+        </ul>
+    </div>
+</body>
+</html>
